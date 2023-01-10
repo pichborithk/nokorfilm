@@ -5,12 +5,12 @@ A simple website built with React, CSS, and a REST API that allows users to sear
 ## Tools and Technologies
 
 - <a href="https://reactjs.org/" target="_blank">React</a>
-- CSS
-- REST API
-- JSON
+- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>
+- <a href="https://restfulapi.net/" target="_blank">REST API</a>
+- <a href="https://www.json.org/json-en.html" target="_blank">JSON</a>
 - Single page application (SPA)
-- AJAX
-- HTTP requests
+- <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX" target="_blank">AJAX</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">HTTP requests</a>
 
 ## Features
 
