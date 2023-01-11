@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import MovieCard from './MovieCard';
-import SearchIcon from './search.svg';
+import SearchBar from './components/SearchBar';
+import MoviesList from './components/MoviesList';
+import NotFound from './components/NotFound';
 import './App.css';
 
 // API Key 41fb3a2f
@@ -23,29 +24,12 @@ const App = () => {
   return (
     <div className='app'>
       <h1>NokorFilm</h1>
-      <div className='search'>
-        <input
-          placeholder='Enter the movie title'
-          value={searchTerm}
-          onChange={(event) => setSearchTerm(event.target.value)}
-        />
-        <img
-          src={SearchIcon}
-          alt='search-icon'
-          onClick={() => searchMovie(searchTerm)}
-        />
-      </div>
-      {movies?.length > 0 ? (
-        <div className='container'>
-          {movies.map((movie) => (
-            <MovieCard movie={movie} key={movie.imdbID} />
-          ))}
-        </div>
-      ) : (
-        <div className='empty'>
-          <h2>No movies found</h2>
-        </div>
-      )}
+      <SearchBar
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        searchMovie={searchMovie}
+      />
+      {movies?.length > 0 ? <MoviesList movies={movies} /> : <NotFound />}
     </div>
   );
 };
